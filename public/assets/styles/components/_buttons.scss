@@ -6,7 +6,7 @@
     align-items: center;
     padding: 12px;
     gap: 10px;
-    background: none;
+    background: adjust-color($color: transparent, $alpha: 0.3);
     border: 1px solid $white;
     border-radius: 20px;
     height: 15px;
