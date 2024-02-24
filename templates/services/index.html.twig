@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Arcadia - Services{% endblock %}
+
+{% block body %}
+<main class="services">
+    <div class="add-service"><button class="button2">Ajouter un service</button>
+    </div>
+    <section class="container-services">
+        <div class="service">
+            <div class="img-service"><img src="./assets/img/restauration.jpg" alt="restauration">
+                <i id="icon-delete" class="fa-solid fa-trash-can"></i>
+                <i id="icon-update" class="fa-solid fa-pencil"></i>
+            </div>
+            <h3>Restauration</h3>
+            <p>Vous pourrez déguster dans notre restaurant: burgers, salades et pizzas. Des tables de
+                pique-nique sont égalemnt mis à disposition.</p>
+
+        </div>
+        <div class="service">
+            <div class="img-service"><img src="./assets/img/visite-guide.jpg" alt="visite guidée">
+                <i id="icon-delete" class="fa-solid fa-trash-can"></i>
+                <i id="icon-update" class="fa-solid fa-pencil"></i>
+                <h3>Visitez guidée gratuite</h3>
+                <p>Vous visiterez les différents habitats avec nos guides passionnés. Vous deviendrez incollables
+                    sur vos animaux préférés</p>
+            </div>
+        </div>
+        <div class="service">
+            <div class="img-service"><img src="./assets/img/petit-train.jpg" alt="petit train">
+                <i id="icon-delete" class="fa-solid fa-trash-can"></i>
+                <i id="icon-update" class="fa-solid fa-pencil"></i>
+                <h3>Petit-train</h3>
+                <p>Embarquez à bord de notre petit train, pour une visite sans effort. Vous explorerez le parc d’une
+                    autre façon.</p>
+            </div>
+        </div>
+
+    </section>
+</main>
+
+{% endblock %}
