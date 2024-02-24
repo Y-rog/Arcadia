@@ -45,3 +45,33 @@
 
     }
 }
+
+#icon-update {
+    position: absolute;
+    font-size: 20px;
+    color: $tertiary;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+    cursor: pointer;
+
+    &:hover {
+        scale: 1.1;
+
+    }
+}
+
+#icon-delete {
+    position: absolute;
+    font-size: 20px;
+    color: $tertiary;
+    top: 10px;
+    right: 10px;
+    z-index: 1;
+    cursor: pointer;
+
+    &:hover {
+        scale: 1.1;
+
+    }
+}

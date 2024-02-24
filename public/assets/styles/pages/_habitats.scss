@@ -1,10 +1,18 @@
 .habitats {
     @include flexCenter;
     margin: 0 auto;
-    padding-bottom: 20px;
     text-align: center;
 
+
     .container-habitats {
+        .add-habitat {
+            @include flexCenter;
+            height: 30px;
+            width: 100%;
+            margin-top: 10px;
+            width: 100%;
+        }
+
         .container-habitat {
             padding: 10px 0px 10px 00px;
 
@@ -40,7 +48,6 @@
 
 
             .button1 {
-                position: absolute;
                 color: $white;
                 border-color: $white;
                 top: 350px;
@@ -120,24 +127,6 @@
         .card {
             .img-animal {
                 position: relative;
-
-                #icon-update {
-                    position: absolute;
-                    font-size: 20px;
-                    color: $tertiary;
-                    top: 10px;
-                    left: 10px;
-                    z-index: 0;
-                }
-
-                #icon-delete {
-                    position: absolute;
-                    font-size: 20px;
-                    color: $tertiary;
-                    top: 10px;
-                    right: 10px;
-                    z-index: 0;
-                }
             }
 
             img {
@@ -147,21 +136,11 @@
                 position: relative;
                 z-index: 1;
 
-
-                &:hover {
-                    filter: brightness(70%);
-                    z-index: 0;
-                }
-
                 @media screen and (max-width: 900px) {
                     height: 120px;
                     width: 120px;
                 }
             }
-
-
         }
     }
-
-
 }

@@ -599,8 +599,22 @@ footer a i {
       -ms-flex-align: center;
           align-items: center;
   margin: 0 auto;
-  padding-bottom: 20px;
   text-align: center;
+}
+.habitats .container-habitats .add-habitat {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 30px;
+  width: 100%;
+  margin-top: 10px;
+  width: 100%;
 }
 .habitats .container-habitats .container-habitat {
   padding: 10px 0px 10px 0px;
@@ -640,7 +654,6 @@ footer a i {
   border-radius: 5px;
 }
 .habitats .container-habitats .container-habitat .button1 {
-  position: absolute;
   color: #FFFFFF;
   border-color: #FFFFFF;
   top: 350px;
@@ -729,33 +742,12 @@ footer a i {
 .list-animals .list-animals-cards .card .img-animal {
   position: relative;
 }
-.list-animals .list-animals-cards .card .img-animal #icon-update {
-  position: absolute;
-  font-size: 20px;
-  color: #F5F6EF;
-  top: 10px;
-  left: 10px;
-  z-index: 0;
-}
-.list-animals .list-animals-cards .card .img-animal #icon-delete {
-  position: absolute;
-  font-size: 20px;
-  color: #F5F6EF;
-  top: 10px;
-  right: 10px;
-  z-index: 0;
-}
 .list-animals .list-animals-cards .card img {
   border-radius: 5px;
   width: 200px;
   height: 200px;
   position: relative;
   z-index: 1;
-}
-.list-animals .list-animals-cards .card img:hover {
-  -webkit-filter: brightness(70%);
-          filter: brightness(70%);
-  z-index: 0;
 }
 @media screen and (max-width: 900px) {
   .list-animals .list-animals-cards .card img {
@@ -825,5 +817,31 @@ footer a i {
   cursor: pointer;
 }
 .button2:hover {
+  scale: 1.1;
+}
+
+#icon-update {
+  position: absolute;
+  font-size: 20px;
+  color: #F5F6EF;
+  top: 10px;
+  left: 10px;
+  z-index: 1;
+  cursor: pointer;
+}
+#icon-update:hover {
+  scale: 1.1;
+}
+
+#icon-delete {
+  position: absolute;
+  font-size: 20px;
+  color: #F5F6EF;
+  top: 10px;
+  right: 10px;
+  z-index: 1;
+  cursor: pointer;
+}
+#icon-delete:hover {
   scale: 1.1;
 }/*# sourceMappingURL=index.css.map */
