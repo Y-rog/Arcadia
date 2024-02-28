@@ -1,12 +1,8 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Arcadia - Contact{% endblock %}
-{% block javascripts %}
-<script src="../assets/js/index.js" defer></script>
-<script src="../assets/js/pages/contact.js" defer></script>
-{% endblock %}
 
-{% block body %}<main class="main-contact">
+{% block body %}<main class="main-form">
     <h3>Ecrivez nous !</h3>
     <form id="contact" action="" method="POST">
         <div>
@@ -26,4 +22,7 @@
         </div>
     </form>
 </main>
+{% endblock %}
+{% block javascripts %}
+<script src="{{asset('assets/js/pages/contact.js')}}"></script>
 {% endblock %}

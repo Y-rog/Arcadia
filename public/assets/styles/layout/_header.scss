@@ -20,6 +20,7 @@ nav {
         display: flex;
 
         li {
+
             a {
                 text-decoration: none;
                 font-family: $title;
@@ -27,6 +28,7 @@ nav {
                 font-weight: 400;
                 color: $white;
                 padding: 20px;
+
 
                 &:hover {
                     color: $secondary;
@@ -37,28 +39,27 @@ nav {
     }
 }
 
-#button-connexion {
-    right: 50px;
-    cursor: pointer;
+.button {
+    @include flexCenter;
+    right: 70px;
+    top: 25px;
+    position: absolute;
 }
 
+.link {
+    display: none;
+}
 
 #icons {
     cursor: pointer;
     display: none;
 }
 
-#link-connexion {
-    display: none;
-}
-
 @media (max-width: 900px) {
-    #button-connexion {
-        display: none;
-    }
 
-    #link-connexion {
-        display: block;
+    .button {
+        display: none !important;
+
     }
 
     #icons {
@@ -82,7 +83,7 @@ nav {
 
     nav ul {
         position: absolute;
-        right: -100%;
+        left: 100%;
         top: 52px;
         flex-direction: column;
         background: $primary;
@@ -93,6 +94,7 @@ nav {
         li {
             padding: 3px 0;
             color: $white;
+            height: 30px;
 
             &:hover {
                 background: $secondary;
@@ -101,6 +103,7 @@ nav {
             a:hover {
                 color: $white;
             }
+
 
         }
     }

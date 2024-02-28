@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Arcadia - Habitats{% endblock %}
+
+
+{% block body %}
+<main class="animal">
+    {% include "cards/card.html.twig" %}
+</main>
+{% endblock %}
+{% block javascripts %}
+<script src="{{asset('assets/js/pages/habitats.js')}}"></script>
+{% endblock %}

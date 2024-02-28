@@ -90,9 +90,23 @@ nav ul li a:hover {
   color: #609966;
 }
 
-#button-connexion {
-  right: 50px;
-  cursor: pointer;
+.button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  right: 70px;
+  top: 25px;
+  position: absolute;
+}
+
+.link {
+  display: none;
 }
 
 #icons {
@@ -100,16 +114,9 @@ nav ul li a:hover {
   display: none;
 }
 
-#link-connexion {
-  display: none;
-}
-
 @media (max-width: 900px) {
-  #button-connexion {
-    display: none;
-  }
-  #link-connexion {
-    display: block;
+  .button {
+    display: none !important;
   }
   #icons {
     display: block;
@@ -129,7 +136,7 @@ nav ul li a:hover {
   }
   nav ul {
     position: absolute;
-    right: -100%;
+    left: 100%;
     top: 52px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -143,6 +150,7 @@ nav ul li a:hover {
   nav ul li {
     padding: 3px 0;
     color: #FFFFFF;
+    height: 30px;
   }
   nav ul li:hover {
     background: #609966;
@@ -755,6 +763,52 @@ footer a i {
     width: 120px;
   }
 }
+.list-animals .list-animals-cards .card .li-page-animal {
+  display: none;
+}
+
+.animal .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  padding: 20px;
+}
+.animal .card .img-animal {
+  position: relative;
+}
+.animal .card .img-animal img {
+  border-radius: 5px;
+  width: 400px;
+  height: 300px;
+  position: relative;
+  z-index: 1;
+}
+@media screen and (max-width: 900px) {
+  .animal .card .img-animal img {
+    width: 300px;
+    height: 250px;
+  }
+}
+.animal .add-report {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 50px;
+  padding-bottom: 20px;
+}
 
 .services {
   padding: 10px;
@@ -814,14 +868,14 @@ footer a i {
   height: auto;
 }
 
-.main-contact {
+.main-form {
   margin: 0 auto;
 }
-.main-contact h3 {
+.main-form h3 {
   padding: 10px;
   text-align: center;
 }
-.main-contact form {
+.main-form form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -840,7 +894,7 @@ footer a i {
   font-family: mont, sans-serif;
   font-size: 12px;
 }
-.main-contact form div {
+.main-form form div {
   margin-bottom: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -854,21 +908,35 @@ footer a i {
           flex-direction: column;
   width: 340px;
 }
-.main-contact form div #title {
+.main-form form div .invalid-credentials {
+  height: 12px;
+  color: red;
+  font-size: 12px;
+  padding: 0px;
+  margin: 0px;
+  text-align: left;
+  display: none;
+}
+.main-form form div #title {
   padding: 5px;
   width: 100%;
 }
-.main-contact form div #message {
+.main-form form div #message {
   padding: 5px;
   height: 200px;
   width: 100%;
   resize: none;
 }
-.main-contact form div #email {
+.main-form form div #email {
   width: 100%;
   padding: 5px;
 }
-.main-contact form .submit {
+.main-form form div #password {
+  width: 100%;
+  padding: 5px;
+}
+.main-form form .submit,
+.main-form form .button-signin {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

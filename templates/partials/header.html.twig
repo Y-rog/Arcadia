@@ -8,10 +8,18 @@
             <li><a href="{{path('page_habitats')}}">Habitats</a></li>
             <li><a href="{{path('page_services')}}">Services</a></li>
             <li><a href="{{path('page_contact')}}">Contact</a></li>
-            <li id="link-connexion"><a href="#">Connexion</a></li>
+            <li class="link" id="link-signin"><a href="{{path('page_signin')}}">Connexion</a>
+            </li>
+            <li class="link" id="link-signout"><a href="{{path('page_home')}}">Déconnexion</a>
+            </li>
         </ul>
         <div id="icons"></div>
-        <button id="button-connexion" class="button1">Connexion</button>
+        <ul>
+            <div class="button" id="button-signin"><button class="button1">Connexion</button>
+            </div>
+            <div class="button" id="button-signout"><button class="button1">Déconnexion</button>
+            </div>
+        </ul>
 
     </nav>
     <aside>

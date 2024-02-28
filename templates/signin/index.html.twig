@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}Arcadia - Conenxion{% endblock %}
+
+{% block body %}
+<main class="main-form">
+    <form id="signin" action="" method="GET">
+        <div>
+            <label for="email">E-mail :</label>
+            <input type="email" id="email" name="email" required>
+            <div class="invalid-credentials">Le mail et/ou le mot de passe sont incorrects.</div>
+        </div>
+        <div>
+            <label for="password">Mot de passe :</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <div class="button-signin">
+            <button type="button" class="btn-validate-form" id="btnSignin">Connexion</button>
+        </div>
+    </form>
+</main>
+{% endblock %}
+
+{% block javascripts %}
+<script src="{{ asset('assets/js/pages/signin.js') }}"></script>
+{% endblock %}

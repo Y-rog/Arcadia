@@ -1,10 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Arcadia - Habitats{% endblock %}
-{% block javascripts %}
-<script src="../assets/js/index.js" defer></script>
-<script src="../assets/js/pages/habitats.js" defer></script>
-{% endblock %}
+
 
 {% block body %}
 <main class="habitats">
@@ -120,14 +117,19 @@
 
                 <div class="list-animals-cards">
                     <div class="card">
-
                         <ul>
-                            <li> <img src="#" alt="">
-                            </li>
-                            <li>Prénom:#</li>
-                            <li>Race:#</li>
-                            <li>Etat:#</li>
-
+                            <div class="img-animal"> <img src="./assets/img/lion-simba.jpg" alt=""><i id="icon-delete"
+                                    class="fa-solid fa-trash-can"></i>
+                                <i id="icon-update" class="fa-solid fa-pencil"></i>
+                            </div>
+                            <li class:"li-page-habitats">Prénom:#</li>
+                            <li class:"li-page-habitats">Race:#</li>
+                            <li class:"li-page-habitats">Habitat:#</li>
+                            <li class:"li-page-habitats">Etat:#</li>
+                            <li class:"li-page-animal">Nourriture proposée:#</li>
+                            <li class:"li-page-animal">Quantité de nourriture:#</li>
+                            <li class:"li-page-animal">Date de passage:#</li>
+                            <li class:"li-page-animal">Détail de l'état:#</li>
                         </ul>
                     </div>
 
@@ -137,4 +139,7 @@
     </section>
 </main>
 
+{% endblock %}
+{% block javascripts %}
+<script src="{{asset('assets/js/pages/habitats.js')}}"></script>
 {% endblock %}
