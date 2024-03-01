@@ -1027,7 +1027,7 @@ textarea {
   scale: 1.1;
 }
 
-#icon-update {
+.icon-update {
   position: absolute;
   font-size: 20px;
   color: #F5F6EF;
@@ -1036,11 +1036,11 @@ textarea {
   z-index: 1;
   cursor: pointer;
 }
-#icon-update:hover {
+.icon-update:hover {
   scale: 1.1;
 }
 
-#icon-delete {
+.icon-delete {
   position: absolute;
   font-size: 20px;
   color: #F5F6EF;
@@ -1049,12 +1049,12 @@ textarea {
   z-index: 1;
   cursor: pointer;
 }
-#icon-delete:hover {
+.icon-delete:hover {
   scale: 1.1;
 }
 
 .btn-validate-form {
-  background: #609966;
+  background: rgb(28, 165, 28);
   border: none;
   color: #FFFFFF;
   padding: 5px 12px 5px 12px;
@@ -1064,10 +1064,121 @@ textarea {
   font-size: 14px;
   cursor: pointer;
 }
+.btn-validate-form:hover {
+  -webkit-filter: brightness(0.9);
+          filter: brightness(0.9);
+}
 .btn-validate-form:disabled {
   cursor: not-allowed;
   background: rgb(149, 182, 149);
 }
 .btn-validate-form:disabled:hover {
   background: rgb(149, 182, 149);
+}
+
+.btn-cancel-form {
+  background: rgb(255, 2, 2);
+  border: none;
+  color: #FFFFFF;
+  padding: 5px 12px 5px 12px;
+  gap: 10px;
+  border-radius: 20px;
+  font-family: mont, sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+}
+.btn-cancel-form:hover {
+  -webkit-filter: brightness(0.9);
+          filter: brightness(0.9);
+}
+
+.icon-validate {
+  color: green;
+  font-size: 30px;
+  cursor: pointer;
+}
+.icon-validate:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.icon-cancel {
+  font-size: 30px;
+  color: red;
+  cursor: pointer;
+}
+.icon-cancel:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.modal-delete {
+  display: none;
+  position: absolute;
+  background: white;
+  top: 50px;
+}
+.modal-delete p {
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+}
+.modal-delete .icons-modal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.modal-add-service,
+.modal-update-service {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  display: none;
+  z-index: 3;
+  background-color: #FFFFFF;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+.modal-add-service .main-form,
+.modal-update-service .main-form {
+  margin: 0 auto;
+}
+.modal-add-service .main-form .form-group,
+.modal-update-service .main-form .form-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.modal-add-service .main-form .form-btn,
+.modal-update-service .main-form .form-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }/*# sourceMappingURL=index.css.map */

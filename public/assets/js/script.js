@@ -87,6 +87,14 @@ if (isConnected()) {
 }
 
 //fonction pour afficher ou masquer les elements en fonction de l'etat de connexion + responsive
+window.addEventListener('load', () => {
+  if(window.innerWidth < 900 && isConnected()){
+    document.getElementById('link-signout').style.display = 'block';}
+    else{
+      document.getElementById('link-signout').style.display = 'none';
+    }
+  });
+
 window.addEventListener('resize', () => {
   if(window.innerWidth < 900 && isConnected()){
     document.getElementById('link-signout').style.display = 'block';}
