@@ -3,14 +3,14 @@
     margin: 0 auto;
     text-align: center;
 
-
     .container-habitats {
+        position: relative;
+
         .add-habitat {
             @include flexCenter;
             height: 30px;
             width: 100%;
             margin-top: 10px;
-            width: 100%;
         }
 
         .container-habitat {
@@ -32,7 +32,6 @@
                         height: 200px;
                         width: 375px;
                     }
-
                 }
             }
 
@@ -90,6 +89,7 @@
 
     p {
         padding: 0 5px 0 5px;
+
     }
 
 }
@@ -99,18 +99,25 @@
     padding-top: 20px;
     padding-bottom: 20px;
 
-
-    .list-title {
-        text-align: center;
-        padding-bottom: 60px;
+    .add-animal {
+        height: 40px;
         position: relative;
+        width: 100%;
         @include flexCenter;
 
         .button2 {
-            top: 40px;
             left: 50% -5px;
             translate: translateX(50%);
         }
+    }
+
+
+
+    .list-title {
+        text-align: center;
+        position: relative;
+        @include flexCenter;
+
     }
 
     .list-animals-cards {
@@ -121,7 +128,7 @@
         margin: 0 auto;
 
         @media screen and (max-width: 900px) {
-            width: 65%;
+            width: 375px;
         }
 
         .card {
@@ -131,20 +138,27 @@
 
             img {
                 border-radius: 5px;
-                width: 200px;
-                height: 200px;
+                width: 175px;
+                height: 130px;
                 position: relative;
                 z-index: 1;
-
-                @media screen and (max-width: 900px) {
-                    height: 120px;
-                    width: 120px;
-                }
             }
 
             .li-page-animal {
                 display: none;
+
+            }
+
+            .icon-open-details {
+                cursor: pointer;
+
+            }
+
+            .icon-reduce-details {
+                display: none;
+                cursor: pointer;
             }
         }
+
     }
 }

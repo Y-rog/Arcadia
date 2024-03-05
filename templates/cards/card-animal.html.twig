@@ -1,15 +1,39 @@
 <div class="card" id="$idAnimal">
-    <ul>
-        <div class="img-animal"> <img src="$url" alt=""><i id="icon-delete" class="fa-solid fa-trash-can"></i>
-            <i id="icon-update" class="fa-solid fa-pencil"></i>
+    <div class="modal-update-animal" id="modal-update-animal">
+        <h3>Modifier #id</h3>
+        <div class="main-form">
+            <form action="" method="post" class="form-crud">
+                <div class="form-group">
+                    <label for="image">Image</label>
+                    <input type="file" id="image" name="image" required>
+                </div>
+                <div class="form-group">
+                    <label for="name">Nom de l'animal</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea name="description" id="description" cols="30" rows="10" required></textarea>
+                </div>
+                <div class="form-btn">
+                    <button type="btn-container" class="btn-validate-form" id="btn-add">Modifier</button>
+                    <button type="button" class="btn-cancel-form" id="btn-cancel-update">Annuler</button>
+                </div>
+            </form>
         </div>
-        <li class:"li-page-habitats">Prénom:#</li>
-        <li class:"li-page-habitats">Race:#</li>
-        <li class:"li-page-habitats">Habitat:#</li>
-        <li class:"li-page-habitats">Etat:#</li>
-        <li class:"li-page-animal">Nourriture proposée:#</li>
-        <li class:"li-page-animal">Quantité de nourriture:#</li>
-        <li class:"li-page-animal">Date de passage:#</li>
-        <li class:"li-page-animal">Détail de l'état:#</li>
+
+    </div>
+    <ul>
+        <div class="img-animal"> <img src="$url" alt="">
+            <div class="icon-delete" data-show="admin"><i class="fa-solid fa-trash-can"></i></div>
+            <div class="icon-update" data-show="admin"><i class="fa-solid fa-pencil"></i></div>
+        </div>
     </ul>
+    <div class="modal-delete" id="modal-delete-animal">
+        <p>Voulez-vous vraiment supprimer cet animal?</p>
+        <div class="icons-modal">
+            <div class="icon-validate" id="icon-validate-animal"></div>><i class="fa-solid fa-circle-check"></i>
+        </div>
+        <div class="icon-cancel" id="icon-validate-animal"></div>><i class="fa-solid fa-rectangle-xmark"></i>
+    </div>
 </div>

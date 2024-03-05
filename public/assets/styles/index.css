@@ -609,6 +609,9 @@ footer a i {
   margin: 0 auto;
   text-align: center;
 }
+.habitats .container-habitats {
+  position: relative;
+}
 .habitats .container-habitats .add-habitat {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -622,7 +625,6 @@ footer a i {
   height: 30px;
   width: 100%;
   margin-top: 10px;
-  width: 100%;
 }
 .habitats .container-habitats .container-habitat {
   padding: 10px 0px 10px 0px;
@@ -707,10 +709,10 @@ footer a i {
   padding-top: 20px;
   padding-bottom: 20px;
 }
-.list-animals .list-title {
-  text-align: center;
-  padding-bottom: 60px;
+.list-animals .add-animal {
+  height: 40px;
   position: relative;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -721,10 +723,22 @@ footer a i {
       -ms-flex-align: center;
           align-items: center;
 }
-.list-animals .list-title .button2 {
-  top: 40px;
+.list-animals .add-animal .button2 {
   left: 50% -5px;
   translate: translateX(50%);
+}
+.list-animals .list-title {
+  text-align: center;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .list-animals .list-animals-cards {
   display: -webkit-box;
@@ -744,7 +758,7 @@ footer a i {
 }
 @media screen and (max-width: 900px) {
   .list-animals .list-animals-cards {
-    width: 65%;
+    width: 375px;
   }
 }
 .list-animals .list-animals-cards .card .img-animal {
@@ -752,19 +766,20 @@ footer a i {
 }
 .list-animals .list-animals-cards .card img {
   border-radius: 5px;
-  width: 200px;
-  height: 200px;
+  width: 175px;
+  height: 130px;
   position: relative;
   z-index: 1;
 }
-@media screen and (max-width: 900px) {
-  .list-animals .list-animals-cards .card img {
-    height: 120px;
-    width: 120px;
-  }
-}
 .list-animals .list-animals-cards .card .li-page-animal {
   display: none;
+}
+.list-animals .list-animals-cards .card .icon-open-details {
+  cursor: pointer;
+}
+.list-animals .list-animals-cards .card .icon-reduce-details {
+  display: none;
+  cursor: pointer;
 }
 
 .animal .card {
@@ -843,26 +858,32 @@ footer a i {
   padding: 10px;
 }
 .services .container-services .service {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.services .container-services .service .container-service {
   height: 300px;
   width: 200px;
   padding: 20px;
-}
-.services .container-services .service .img-service {
   position: relative;
 }
-.services .container-services .service img {
+.services .container-services .service .container-service .img-service {
+  position: relative;
+}
+.services .container-services .service .container-service img {
   width: 100%;
   height: 100%;
   border-radius: 5px;
   z-index: 0;
 }
-.services .container-services .service h3 {
+.services .container-services .service .container-service h3 {
   background: #F5F6EF;
   text-align: center;
   border-radius: 5px;
   padding: 10px;
 }
-.services .container-services .service p {
+.services .container-services .service .container-service p {
   padding: 5px 10px;
   border-radius: 5px;
   height: auto;
@@ -1117,6 +1138,10 @@ textarea {
   position: absolute;
   background: white;
   top: 50px;
+  width: 100%;
+  height: 100px;
+  border-radius: 5px;
+  z-index: 5;
 }
 .modal-delete p {
   font-size: 14px;
@@ -1132,7 +1157,11 @@ textarea {
 }
 
 .modal-add-service,
-.modal-update-service {
+.modal-update-service,
+.modal-add-habitat,
+.modal-update-habitat,
+.modal-add-animal,
+.modal-update-animal {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1153,12 +1182,28 @@ textarea {
   margin: 0 auto;
   border-radius: 5px;
 }
+.modal-add-service h3,
+.modal-update-service h3,
+.modal-add-habitat h3,
+.modal-update-habitat h3,
+.modal-add-animal h3,
+.modal-update-animal h3 {
+  background: #FFFFFF !important;
+}
 .modal-add-service .main-form,
-.modal-update-service .main-form {
+.modal-update-service .main-form,
+.modal-add-habitat .main-form,
+.modal-update-habitat .main-form,
+.modal-add-animal .main-form,
+.modal-update-animal .main-form {
   margin: 0 auto;
 }
 .modal-add-service .main-form .form-group,
-.modal-update-service .main-form .form-group {
+.modal-update-service .main-form .form-group,
+.modal-add-habitat .main-form .form-group,
+.modal-update-habitat .main-form .form-group,
+.modal-add-animal .main-form .form-group,
+.modal-update-animal .main-form .form-group {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1170,7 +1215,11 @@ textarea {
           align-items: center;
 }
 .modal-add-service .main-form .form-btn,
-.modal-update-service .main-form .form-btn {
+.modal-update-service .main-form .form-btn,
+.modal-add-habitat .main-form .form-btn,
+.modal-update-habitat .main-form .form-btn,
+.modal-add-animal .main-form .form-btn,
+.modal-update-animal .main-form .form-btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

@@ -6,17 +6,75 @@
 {% block body %}
 <main class="habitats">
     <section class="container-habitats">
-        <div class="add-habitat">
-            <button class="button2">Ajouter un habitat</button>
+        <div class="add-habitat" data-show="admin">
+            <button id="btn-add-habitat" class="button2">Ajouter un habitat</button>
         </div>
-        <section class="savane">
+        <div class="modal-add-habitat" id="modal-add-habitat">
+            <h3>Ajouter un habitat</h3>
+            <div class="main-form">
+                <form action="" method="post" class="form-crud">
+                    <div class="form-group">
+                        <label for="image">Image</label>
+                        <input type="file" id="image" name="image" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Nom del'habitat</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea name="description" id="description" cols="30" rows="10" required></textarea>
+                    </div>
+                    <div class="form-btn">
+                        <button type="btn-container" class="btn-validate-form"
+                            id="btn-validate-add-habitat">Ajouter</button>
+                        <button type="button" class="btn-cancel-form" id="btn-cancel-add-habitat">Annuler</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <section class="habitat">
+            <div class="modal-update-habitat" id="modal-update-habitat-savane">
+                <h3>Modifier #id</h3>
+                <div class="main-form">
+                    <form action="" method="post" class="form-crud">
+                        <div class="form-group">
+                            <label for="image">Image</label>
+                            <input type="file" id="image" name="image" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Nom de l'habitat</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Description</label>
+                            <textarea name="description" id="description" cols="30" rows="10" required></textarea>
+                        </div>
+                        <div class="form-btn">
+                            <button type="btn-container" class="btn-validate-form"
+                                id="btn-validate-update-habitat-savane">Modifier</button>
+                            <button type="button" class="btn-cancel-form"
+                                id="btn-cancel-update-habitat-savane">Annuler</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
             <div class="container-habitat">
                 <div class="img-habitat" id="imgSavane"><img src="./assets/img/savane.jpg" alt="">
-                    <div class="icon-delete"><i class="fa-solid fa-trash-can"></i></div>
-                    <div class="icon-update"><i class="fa-solid fa-pencil"></i></div>
+                    <div class="icon-delete" id="icon-delete-habitat-savane" data-show="admin"><i
+                            class="fa-solid fa-trash-can"></i></div>
+                    <div class="icon-update" id="icon-update-habitat-savane" data-show="admin"><i
+                            class="fa-solid fa-pencil"></i></div>
                     <h3>La savane</h3>
                     <button id="button-discover-savane" class="button1">Découvrir</button>
                     <div id="minimize-savane" class="minimize"><i class="fa-solid fa-window-minimize"></i></div>
+                </div>
+            </div>
+            <div class="modal-delete" id="modal-delete-habitat-savane">
+                <p>Voulez-vous vraiment supprimer cet habitat?</p>
+                <div class="icons-modal">
+                    <div class="icon-validate" id="icon-validate-savane"><i class="fa-solid fa-circle-check"></i></div>
+                    <div class="icon-cancel" id="icon-cancel-savane"><i class="fa-solid fa-rectangle-xmark"></i></div>
                 </div>
             </div>
             <div id="description-savane" class="description">
@@ -24,36 +82,211 @@
                     de
                     notre couple de girafes, des zèbres et autres espèces.</p>
             </div>
-
-            </div>
             <div id="list-animals-savane" class="list-animals">
                 <div class="list-title">
                     <h3>Liste des animaux</h3>
+                </div>
+                <div class="add-animal" data-show="admin"><button id="btn-add-animal-savane" class="button2">Ajouter un
+                        animal</button>
+                </div>
+                <div class="modal-add-animal" id="modal-add-animal-savane">
+                    <h3>Ajouter un animal</h3>
+                    <div class="main-form">
+                        <form action="" method="post" class="form-crud">
+                            <div class="form-group">
+                                <label for="image">Image</label>
+                                <input type="file" id="image" name="image" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="firstname">Prénom de l'animal</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="breed">Race de l'animal</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-btn">
+                                <button type="btn-container" class="btn-validate-form"
+                                    id="btn-validate-add-animal-savane">Ajouter</button>
+                                <button type="button" class="btn-cancel-form"
+                                    id="btn-cancel-add-animal-savane">Annuler</button>
+                            </div>
 
-                    <button class="button2">Ajouter un animal</button>
+                        </form>
+                    </div>
                 </div>
                 <div class="list-animals-cards">
-                    <div class="card">
+                    <div class="card" id="1">
+                        <div class="modal-update-animal" id="modal-update-animal-1">
+                            <h3>Modifier #id</h3>
+                            <div class="main-form">
+                                <form action="" method="post" class="form-crud">
+                                    <div class="form-group">
+                                        <label for="image">Image</label>
+                                        <input type="file" id="image" name="image" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="firstname">Prénom de l'animal</label>
+                                        <input type="text" id="name" name="name" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="breed">Race de l'animal</label>
+                                        <input type="text" id="name" name="name" required>
+                                    </div>
+                                    <div class="form-btn">
+                                        <button type="btn-container" class="btn-validate-form"
+                                            id="btn-validate-update-animal-1">Modifier</button>
+                                        <button type="button" class="btn-cancel-form"
+                                            id="btn-cancel-update-animal-1">Annuler</button>
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
                         <ul>
                             <div class="img-animal"> <img src="./assets/img/lion-simba.jpg" alt="">
-                                <div class="icon-delete"><i class="fa-solid fa-trash-can"></i></div>
-                                <div class="icon-update"><i class="fa-solid fa-pencil"></i></div>
-                            </div>
-                            <li>Prénom:#</li>
-                            <li>Race:#</li>
-                            <li>Etat:#</li>
-
+                                <div class="icon-delete" id="icon-delete-animal-1" data-show="admin"><i
+                                        class="fa-solid fa-trash-can"></i></div>
+                                <div class="icon-update" id="icon-update-animal-1" data-show="admin"><i
+                                        class="fa-solid fa-pencil"></i></div>
+                                <div class="modal-delete" id="modal-delete-animal-1">
+                                    <p>Voulez-vous vraiment supprimer cet animal?</p>
+                                    <div class="icons-modal">
+                                        <div class="icon-validate" id="icon-validate-animal-1"><i
+                                                class="fa-solid fa-circle-check"></i>
+                                        </div>
+                                        <div class="icon-cancel" id="icon-cancel-animal-1"><i
+                                                class="fa-solid fa-rectangle-xmark"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="li-page-habitat">
+                                    <li>Prénom: Simba</li>
+                                    <li>Race: Lion</li>
+                                    <li>Habitat: Savane</li>
+                                    <li>Etat: Bon <i class="fa-solid fa-caret-down icon-open-details"
+                                            id="icon-open-details-animal-1"></i>
+                                        <i class="fa-solid fa-caret-up icon-reduce-details"
+                                            id="icon-reduce-details-animal-1"></i>
+                                    </li>
+                                </div>
+                                <div class="li-page-animal" id="li-page-animal-details-1">
+                                    <li>Nourriture proposée:#</li>
+                                    <li>Quantité de nourriture:#</li>
+                                    <li>Date de passage:#</li>
+                                    <li>Détail de l'état:#</li>
+                                </div>
                         </ul>
+                    </div>
+                    <div class="card" id="2">
+                        <div class="modal-update-animal" id="modal-update-animal-2">
+                            <h3>Modifier #id</h3>
+                            <div class="main-form">
+                                <form action="" method="post" class="form-crud">
+                                    <div class="form-group">
+                                        <label for="image">Image</label>
+                                        <input type="file" id="image" name="image" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="firstname">Prénom de l'animal</label>
+                                        <input type="text" id="name" name="name" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="breed">Race de l'animal</label>
+                                        <input type="text" id="name" name="name" required>
+                                    </div>
+                                    <div class="form-btn">
+                                        <button type="btn-container" class="btn-validate-form"
+                                            id="btn-validate-update-animal-2">Modifier</button>
+                                        <button type="button" class="btn-cancel-form"
+                                            id="btn-cancel-update-animal-2">Annuler</button>
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+                        <ul>
+                            <div class="img-animal"> <img src="./assets/img/girafe-julie.jpg" alt="">
+                                <div class="icon-delete" id="icon-delete-animal-2" data-show="admin"><i
+                                        class="fa-solid fa-trash-can"></i></div>
+                                <div class="icon-update" id="icon-update-animal-2" data-show="admin"><i
+                                        class="fa-solid fa-pencil"></i></div>
+                                <div class="modal-delete" id="modal-delete-animal-2">
+                                    <p>Voulez-vous vraiment supprimer cet animal?</p>
+                                    <div class="icons-modal">
+                                        <div class="icon-validate" id="icon-validate-animal-2"><i
+                                                class="fa-solid fa-circle-check"></i>
+                                        </div>
+                                        <div class="icon-cancel" id="icon-cancel-animal-2"><i
+                                                class="fa-solid fa-rectangle-xmark"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="li-page-habitat">
+                                    <li>Prénom: Julie</li>
+                                    <li>Race: Girafe</li>
+                                    <li>Habitat: Savane</li>
+                                    <li>Etat: Bon <i class="fa-solid fa-caret-down icon-open-details"
+                                            id="icon-open-details-animal-2"></i>
+                                        <i class="fa-solid fa-caret-up icon-reduce-details"
+                                            id="icon-reduce-details-animal-2"></i>
+                                    </li>
+                                </div>
+                                <div class="li-page-animal" id="li-page-animal-details-2">
+                                    <li>Nourriture proposée:#</li>
+                                    <li>Quantité de nourriture:#</li>
+                                    <li>Date de passage:#</li>
+                                    <li>Détail de l'état:#</li>
+                                </div>
+                        </ul>
+
                     </div>
                 </div>
             </div>
         </section>
 
         <section class="marais">
+            <div class="modal-update-habitat" id="modal-update-habitat-marais">
+                <h3>Modifier #id</h3>
+                <div class="main-form">
+                    <form action="" method="post" class="form-crud">
+                        <div class="form-group">
+                            <label for="image">Image</label>
+                            <input type="file" id="image" name="image" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Nom de l'habitat</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Description</label>
+                            <textarea name="description" id="description" cols="30" rows="10" required></textarea>
+                        </div>
+                        <div class="form-btn">
+                            <button type="btn-container" class="btn-validate-form"
+                                id="btn-validate-update-habitat-marais">Modifier</button>
+                            <button type="button" class="btn-cancel-form"
+                                id="btn-cancel-update-habitat-marais">Annuler</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
             <div class="container-habitat">
                 <div class="img-habitat"><img src="./assets/img/marais.jpg" alt="">
-                    <div class="icon-delete"><i class="fa-solid fa-trash-can"></i></div>
-                    <div class="icon-update"><i class="fa-solid fa-pencil"></i></div>
+                    <div class="icon-delete" id="icon-delete-habitat-marais" data-show="admin"><i
+                            class="fa-solid fa-trash-can"></i></div>
+                    <div class="icon-update" id="icon-update-habitat-marais" data-show="admin"><i
+                            class="fa-solid fa-pencil"></i></div>
+                    <div class="modal-delete" id="modal-delete-habitat-marais">
+                        <p>Voulez-vous vraiment supprimer cet habitat?</p>
+                        <div class="icons-modal">
+                            <div class="icon-validate" id="icon-validate-marais"><i
+                                    class="fa-solid fa-circle-check"></i>
+                            </div>
+                            <div class="icon-cancel" id="icon-cancel-marais"><i class="fa-solid fa-rectangle-xmark"></i>
+                            </div>
+                        </div>
+                    </div>
                     <h3>Le marais</h3>
                     <button id="button-discover-marais" class="button1">Découvrir</button>
                     <div id="minimize-marais" class="minimize"><i class="fa-solid fa-window-minimize"></i></div>
@@ -64,27 +297,99 @@
                 <p>Baladez vous au coeur du marais, venez découvrir nos flamants roses et les divers espèces
                     d'oiseaux.</p>
             </div>
-
-            </div>
             <div id="list-animals-marais" class="list-animals">
                 <div class="list-title">
-                    <h2>Liste des animaux</h2>
-
-                    <button id="button-add-animal" class="button2">Ajouter un animal</button>
+                    <h3>Liste des animaux</h3>
                 </div>
-
-                <div class="list-animals-cards">
-                    <div class="card">
-
-                        <ul>
-                            <div class="card-img"> <img src="#" alt="">
-                                <div class="icon-delete"><i class="fa-solid fa-trash-can"></i></div>
-                                <div class="icon-update"><i class="fa-solid fa-pencil"></i></div>
+                <div class="add-animal" data-show="admin"><button id="btn-add-animal-marais" class="button2">Ajouter un
+                        animal</button>
+                </div>
+                <div class="modal-add-animal" id="modal-add-animal-marais">
+                    <h3>Ajouter un animal</h3>
+                    <div class="main-form">
+                        <form action="" method="post" class="form-crud">
+                            <div class="form-group">
+                                <label for="image">Image</label>
+                                <input type="file" id="image" name="image" required>
                             </div>
-                            <li>Prénom:#</li>
-                            <li>Race:#</li>
-                            <li>Etat:#</li>
+                            <div class="form-group">
+                                <label for="name">Nom de l'animal</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="description">Description</label>
+                                <textarea name="description" id="description" cols="30" rows="10" required></textarea>
+                            </div>
+                            <div class="form-btn">
+                                <button type="btn-container" class="btn-validate-form"
+                                    id="btn-validate-add-animal-marais">Ajouter</button>
+                                <button type="button" class="btn-cancel-form"
+                                    id="btn-cancel-add-animal-marais">Annuler</button>
+                            </div>
 
+                        </form>
+                    </div>
+                </div>
+                <div class="list-animals-cards">
+                    <div class="card" id="3">
+                        <div class="modal-update-animal" id="modal-update-animal-3">
+                            <h3>Modifier #id</h3>
+                            <div class="main-form">
+                                <form action="" method="post" class="form-crud">
+                                    <div class="form-group">
+                                        <label for="image">Image</label>
+                                        <input type="file" id="image" name="image" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="firstname">Prénom de l'animal</label>
+                                        <input type="text" id="name" name="name" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="breed">Race de l'animal</label>
+                                        <input type="text" id="name" name="name" required>
+                                    </div>
+                                    <div class="form-btn">
+                                        <button type="btn-container" class="btn-validate-form"
+                                            id="btn-validate-update-animal-3">Modifier</button>
+                                        <button type="button" class="btn-cancel-form"
+                                            id="btn-cancel-update-animal-3">Annuler</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <ul>
+                            <div class="img-animal"> <img src="./assets/img/elephant-roger.jpg" alt="">
+                                <div class="icon-delete" id="icon-delete-animal-3" data-show="admin"><i
+                                        class="fa-solid fa-trash-can"></i></div>
+                                <div class="icon-update" id="icon-update-animal-3" data-show="admin"><i
+                                        class="fa-solid fa-pencil"></i></div>
+                                <div class="modal-delete" id="modal-delete-animal-3">
+                                    <p>Voulez-vous vraiment supprimer cet animal?</p>
+                                    <div class="icons-modal">
+                                        <div class="icon-validate" id="icon-validate-animal-3"><i
+                                                class="fa-solid fa-circle-check"></i>
+                                        </div>
+                                        <div class="icon-cancel" id="icon-cancel-animal-3"><i
+                                                class="fa-solid fa-rectangle-xmark"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="li-page-habitat">
+                                    <li>Prénom: Roger</li>
+                                    <li>Race: Elephant</li>
+                                    <li>Habitat: Marais</li>
+                                    <li>Etat: Mauvais <i class="fa-solid fa-caret-down icon-open-details"
+                                            id="icon-open-details-animal-3"></i>
+                                        <i class="fa-solid fa-caret-up icon-reduce-details"
+                                            id="icon-reduce-details-animal-3"></i>
+                                    </li>
+                                </div>
+                                <div class="li-page-animal" id="li-page-animal-details-3">
+                                    <li>Nourriture proposée:#</li>
+                                    <li>Quantité de nourriture:#</li>
+                                    <li>Date de passage:#</li>
+                                    <li>Détail de l'état:#</li>
+                                </div>
                         </ul>
                     </div>
 
@@ -93,10 +398,47 @@
         </section>
 
         <section class="jungle">
+            <div class="modal-update-habitat" id="modal-update-habitat-jungle">
+                <h3>Modifier #id</h3>
+                <div class="main-form">
+                    <form action="" method="post" class="form-crud">
+                        <div class="form-group">
+                            <label for="image">Image</label>
+                            <input type="file" id="image" name="image" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Nom de l'habitat</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Description</label>
+                            <textarea name="description" id="description" cols="30" rows="10" required></textarea>
+                        </div>
+                        <div class="form-btn">
+                            <button type="btn-container" class="btn-validate-form"
+                                id="btn-validate-update-habitat-jungle">Modifier</button>
+                            <button type="button" class="btn-cancel-form"
+                                id="btn-cancel-update-habitat-jungle">Annuler</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
             <div class="container-habitat">
-                <div class="img-habitat"><img src="./assets/img/jungle.jpg" alt=""><i class="icon-delete"
-                        class="fa-solid fa-trash-can"></i>
-                    <i class="icon-update" class="fa-solid fa-pencil"></i>
+                <div class="img-habitat"><img src="./assets/img/jungle.jpg" alt="">
+                    <div class="icon-delete" id="icon-delete-habitat-jungle" data-show="admin"><i
+                            class="fa-solid fa-trash-can"></i></div>
+                    <div class="icon-update" id="icon-update-habitat-jungle" data-show="admin"><i
+                            class="fa-solid fa-pencil"></i></div>
+                    <div class="modal-delete" id="modal-delete-habitat-jungle">
+                        <p>Voulez-vous vraiment supprimer cet habitat?</p>
+                        <div class="icons-modal">
+                            <div class="icon-validate" id="icon-validate-jungle"><i
+                                    class="fa-solid fa-circle-check"></i>
+                            </div>
+                            <div class="icon-cancel" id="icon-cancel-jungle"><i class="fa-solid fa-rectangle-xmark"></i>
+                            </div>
+                        </div>
+                    </div>
                     <h3>La jungle</h3>
                     <button id="button-discover-jungle" class="button1">Découvrir</button>
                     <div id="minimize-jungle" class="minimize"><i class="fa-solid fa-window-minimize"></i></div>
@@ -107,33 +449,103 @@
                 <p>Aventurez vous dans la jungle, venez découvrir nos félins, tigres, pumas et jaguar. </p>
             </div>
 
-            </div>
             <div id="list-animals-jungle" class="list-animals">
                 <div class="list-title">
-                    <h2>Liste des animaux</h2>
-
-                    <button id="button-add-animal" class="button2">Ajouter un animal</button>
+                    <h3>Liste des animaux</h3>
                 </div>
-
-                <div class="list-animals-cards">
-                    <div class="card">
-                        <ul>
-                            <div class="img-animal"> <img src="./assets/img/lion-simba.jpg" alt=""><i id="icon-delete"
-                                    class="fa-solid fa-trash-can"></i>
-                                <i id="icon-update" class="fa-solid fa-pencil"></i>
+                <div class="add-animal" data-show="admin"><button id="btn-add-animal-jungle" class="button2">Ajouter un
+                        animal</button>
+                </div>
+                <div class="modal-add-animal" id="modal-add-animal-jungle">
+                    <h3>Ajouter un animal</h3>
+                    <div class="main-form">
+                        <form action="" method="post" class="form-crud">
+                            <div class="form-group">
+                                <label for="image">Image</label>
+                                <input type="file" id="image" name="image" required>
                             </div>
-                            <li class:"li-page-habitats">Prénom:#</li>
-                            <li class:"li-page-habitats">Race:#</li>
-                            <li class:"li-page-habitats">Habitat:#</li>
-                            <li class:"li-page-habitats">Etat:#</li>
-                            <li class:"li-page-animal">Nourriture proposée:#</li>
-                            <li class:"li-page-animal">Quantité de nourriture:#</li>
-                            <li class:"li-page-animal">Date de passage:#</li>
-                            <li class:"li-page-animal">Détail de l'état:#</li>
+                            <div class="form-group">
+                                <label for="name">Nom de l'animal</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="description">Description</label>
+                                <textarea name="description" id="description" cols="30" rows="10" required></textarea>
+                            </div>
+                            <div class="form-btn">
+                                <button type="btn-container" class="btn-validate-form"
+                                    id="btn-validate-add-animal-jungle">Ajouter</button>
+                                <button type="button" class="btn-cancel-form"
+                                    id="btn-cancel-add-animal-jungle">Annuler</button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+                <div class="list-animals-cards">
+                    <div class="card" id="4">
+                        <div class="modal-update-animal" id="modal-update-animal-4">
+                            <h3>Modifier #id</h3>
+                            <div class="main-form">
+                                <form action="" method="post" class="form-crud">
+                                    <div class="form-group">
+                                        <label for="image">Image</label>
+                                        <input type="file" id="image" name="image" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="firstname">Prénom de l'animal</label>
+                                        <input type="text" id="name" name="name" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="breed">Race de l'animal</label>
+                                        <input type="text" id="name" name="name" required>
+                                    </div>
+                                    <div class="form-btn">
+                                        <button type="btn-container" class="btn-validate-form"
+                                            id="btn-validate-update-animal-4">Modifier</button>
+                                        <button type="button" class="btn-cancel-form"
+                                            id="btn-cancel-update-animal-4">Annuler</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <ul>
+                            <div class="img-animal"> <img src="./assets/img/zebre-maurice.jpg" alt="">
+                                <div class="icon-delete" id="icon-delete-animal-4" data-show="admin"><i
+                                        class="fa-solid fa-trash-can"></i></div>
+                                <div class="icon-update" id="icon-update-animal-4" data-show="admin"><i
+                                        class="fa-solid fa-pencil"></i></div>
+                                <div class="modal-delete" id="modal-delete-animal-4">
+                                    <p>Voulez-vous vraiment supprimer cet animal?</p>
+                                    <div class="icons-modal">
+                                        <div class="icon-validate" id="icon-validate-animal-4"><i
+                                                class="fa-solid fa-circle-check"></i>
+                                        </div>
+                                        <div class="icon-cancel" id="icon-cancel-animal-4"><i
+                                                class="fa-solid fa-rectangle-xmark"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="li-page-habitat">
+                                    <li>Prénom: Maurice</li>
+                                    <li>Race: Zebre</li>
+                                    <li>Habitat: Savane</li>
+                                    <li>Etat: Bon <i class="fa-solid fa-caret-down icon-open-details"
+                                            id="icon-open-details--animal-4"></i>
+                                        <i class="fa-solid fa-caret-up icon-reduce-details"
+                                            id="icon-reduce-details-animal-4"></i>
+                                    </li>
+                                </div>
+                                <div class="li-page-animal" id="li-page-animal-details-4">
+                                    <li>Nourriture proposée:#</li>
+                                    <li>Quantité de nourriture:#</li>
+                                    <li>Date de passage:#</li>
+                                    <li>Détail de l'état:#</li>
+                                </div>
                         </ul>
                     </div>
-
                 </div>
+            </div>
             </div>
         </section>
     </section>
@@ -142,4 +554,7 @@
 {% endblock %}
 {% block javascripts %}
 <script src="{{asset('assets/js/pages/habitats.js')}}"></script>
+<script src="{{asset('assets/js/pages/habitatsModals.js')}}"></script>
+<script src="{{asset('assets/js/pages/animalsModals.js')}}"></script>
+<script src="{{asset('assets/js/pages/animals.js')}}"></script>
 {% endblock %}

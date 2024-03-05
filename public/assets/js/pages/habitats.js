@@ -22,7 +22,9 @@ for (let i = 0; i < habitats.length; i++) {
     openHabitat(habitat);
 };
 
-function minimizeHabitat(habitat) {if (minimizeButton == null) {return}
+function minimizeHabitat(habitat) {
+    if (minimizeButton == null) {
+        return}
     else {
         minimizeButton.addEventListener('click', () => {
             document.getElementById('minimize-'+habitat).style.display = "none";
