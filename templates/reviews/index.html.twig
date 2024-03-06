@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Arcadia - Avis{% endblock %}
+{% block body %}
+<div class="container-reviews">
+    <div class="title-list-reviews">
+        <h2>Liste des avis</h2>
+    </div>
+    <div class="container-review" id="review-1">
+        <div class="icons-modal">
+            <div class="icon-validate" id="icon-validate-1"><i class="fa-solid fa-circle-check"></i></div>
+            <div class="icon-cancel" id="icon-cancel-1"><i class="fa-solid fa-rectangle-xmark"></i></div>
+        </div>
+        <p>“Un des plus beau zoo que j’ai visité, je conseille la visite en petit train, c’était super!”</p>
+        <span>Maurice, 06/02/2024
+        </span>
+    </div>
+    <div class="nav-reviews">
+        <i id="begin" class="fa-solid fa-backward-step"></i>
+        <i id="previous" class="fa-solid fa-caret-left"></i>
+        <i id="next" class="fa-solid fa-caret-right"></i>
+        <i id"end" class="fa-solid fa-forward-step"></i>
+    </div>
+
+    {% block javascripts %}
+    {% endblock %}
+
+    {% endblock %}

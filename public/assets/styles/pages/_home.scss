@@ -241,7 +241,7 @@
             align-items: center;
             height: 120px;
             width: 700px;
-            margin: 20px auto 50px auto;
+            margin: 20px auto 20px auto;
             background: $tertiary;
             border-radius: 10px;
             padding-top: 10px;
@@ -264,18 +264,12 @@
                 font-size: 12px;
             }
 
-            .link-review {
-                height: 20px;
-                font-family: $textContent;
-                font-size: 12px;
-                width: 100%;
-                text-align: right;
-                margin-right: 50px;
-
-            }
         }
 
-
-
+        .link-review {
+            @include flexCenter;
+            padding-bottom: 20px;
+        }
     }
+
 }

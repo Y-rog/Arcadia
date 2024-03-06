@@ -565,7 +565,7 @@ footer a i {
           align-items: center;
   height: 120px;
   width: 700px;
-  margin: 20px auto 50px auto;
+  margin: 20px auto 20px auto;
   background: #F5F6EF;
   border-radius: 10px;
   padding-top: 10px;
@@ -587,13 +587,17 @@ footer a i {
   color: #20241F;
   font-size: 12px;
 }
-.accueil .section-home-3 .container-review .link-review {
-  height: 20px;
-  font-family: mont, sans-serif;
-  font-size: 12px;
-  width: 100%;
-  text-align: right;
-  margin-right: 50px;
+.accueil .section-home-3 .link-review {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 20px;
 }
 
 .habitats {
@@ -1133,6 +1137,18 @@ textarea {
           transform: scale(1.1);
 }
 
+.fa-star {
+  color: #385B3C;
+  cursor: pointer;
+  position: absolute;
+  font-size: 30px;
+}
+
+.star-2 {
+  color: #385B3C;
+  display: none;
+}
+
 .modal-delete {
   display: none;
   position: absolute;
@@ -1230,4 +1246,86 @@ textarea {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+}
+
+.container-reviews {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 auto;
+}
+.container-reviews .container-review {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 120px;
+  width: 700px;
+  margin: 20px auto 0 auto;
+  background: #F5F6EF;
+  border-radius: 10px;
+  padding-top: 10px;
+}
+@media screen and (max-width: 900px) {
+  .container-reviews .container-review {
+    width: 350px;
+  }
+}
+.container-reviews .container-review p {
+  padding-top: 20px;
+  font-style: italic;
+  margin: 0 20px;
+}
+.container-reviews .container-review span {
+  padding: 20px 20px 10px 20px;
+  font-family: mont, sans-serif;
+  font-style: italic;
+  color: #20241F;
+  font-size: 12px;
+}
+.container-reviews .container-review .icon-validate {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.container-reviews .container-review .icon-cancel {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.container-reviews .nav-reviews {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #385B3C;
+}
+.container-reviews .nav-reviews i {
+  padding: 10px;
+  cursor: pointer;
 }/*# sourceMappingURL=index.css.map */

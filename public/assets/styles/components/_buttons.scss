@@ -138,3 +138,15 @@
         transform: scale(1.1);
     }
 }
+
+.fa-star {
+    color: $primary;
+    cursor: pointer;
+    position: absolute;
+    font-size: 30px;
+}
+
+.star-2 {
+    color: $primary;
+    display: none;
+}

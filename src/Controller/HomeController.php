@@ -16,4 +16,12 @@ class HomeController extends AbstractController
             'title_page' => 'Bienvenue au zoo',
         ]);
     }
+    #[Route('/reviews', name: 'page_reviews')]
+    public function reviews(): Response
+    {
+        return $this->render('reviews/index.html.twig', [
+            'controller_name' => 'HomeController',
+            'title_page' => 'Avis des visiteurs',
+        ]);
+    }
 }
